@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 12px;
+  line-height: 18px;
+  color: $main-text-color;
+  font-family:Arial, Helvetica, sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: $main-link-color;
+
+  &:hover {
+    color: $main-link-hover-color;
+  }
+}
+
+h1,h2,h3,h4,h5 {
+  margin: 0;
+  padding: 0;
+  font-family: "Gotham A","Gotham B",sans-serif,-apple-system,serif;
+  -webkit-font-smoothing: antialiased;
+}
+p {
+  margin: 0
+}

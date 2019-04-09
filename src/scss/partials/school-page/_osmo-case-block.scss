@@ -1,0 +1,53 @@
+.osmo-case-block {
+    background: url('../images/school/bg-desktop.jpg') center/cover no-repeat;
+    
+
+    .content-grid {
+        @include mq-hd-up {
+            display: flex;
+            padding: 50px 0 0px;
+        }
+       
+
+        .content-info {
+            color: #fff;
+            text-align: center;
+            padding: 30px 5px;
+            @include mq-hd-up {
+                width: 50%;
+                text-align: start;
+                padding: 100px 50px;
+            }
+            .info-title {
+                font-size: 32px;
+                font-weight: 600;
+                line-height: 35px;
+                padding-bottom: 5px;
+            }
+            .info-title-2 {
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 30px;
+                padding-bottom: 5px;
+            }
+            .info-desc {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 22px;
+            }         
+        }//.content-info
+
+        .content-image {
+            background: url('../images/school/ipad-setup.png') center/contain no-repeat;
+            display: block;
+            height: 350px;
+            @include mq-hd-up {
+                background-position: right 70%;
+                width: 50%;
+                height: 400px;
+            }
+        }
+
+    }//.content-grid
+
+}

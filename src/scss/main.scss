@@ -1,0 +1,45 @@
+@import 'var';
+@import 'mixins/media';
+@import 'reset';
+@import 'helpers/container';
+
+// Libs
+@import 'libs/swiper';
+
+// Partials
+
+//global
+@import 'partials/global/header-block';
+@import 'partials/global/fake-header-block';
+@import 'partials/global/footer-block';
+
+//home-page
+
+@import 'partials/home-page/bner-block';
+@import 'partials/home-page/page-welcome-block';
+@import 'partials/home-page/work-block';
+@import 'partials/home-page/osmo-play-block';
+@import 'partials/home-page/osmo-school-block';
+@import 'partials/home-page/shopping-option-block';
+@import 'partials/home-page/experiment-block';
+@import 'partials/home-page/award-block';
+@import 'partials/home-page/retailer-block';
+
+//faq-page
+@import 'partials/faq-page/title-block';
+@import 'partials/faq-page/contact-block';
+@import 'partials/faq-page/faq-block';
+
+//school-page
+@import 'partials/school-page/bner-school-block';
+@import 'partials/school-page/intro-block';
+@import 'partials/school-page/learning-osmo-block';
+@import 'partials/school-page/training-osmo-block';
+@import 'partials/school-page/osmo-case-block';
+@import 'partials/school-page/get-osmo-block';
+@import 'partials/school-page/need-funding-block';
+@import 'partials/school-page/community-block';
+@import 'partials/school-page/school-stripe-block';
+@import 'partials/school-page/teach-with-osmo-block';
+@import 'partials/school-page/school-carousel-block';
+@import 'partials/school-page/stripe-for-grades';

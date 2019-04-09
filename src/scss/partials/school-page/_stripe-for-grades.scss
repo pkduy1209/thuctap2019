@@ -1,0 +1,214 @@
+.stripe-for-grades {
+  padding: 0 20px;
+
+ .container {
+   padding: 50px 0
+ }
+ .grades-head {
+   .head-title {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 35px;
+    padding-bottom: 20px;
+   }
+   .head-desc {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+    padding-bottom: 10px;
+   }
+   @include mq-hd-up {
+    text-align: center;
+    padding: 0 320px;
+   }
+
+ }
+ .grades-body {
+  @include mq-hd-up {
+    margin: 50px 0 0;
+  }
+
+  .grades-list-game-icon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    
+    .img-icon-game {
+     
+      display: inline-block;
+      margin: 15px;
+      height: 60px;
+      width: 60px;
+      border-radius: 22%;
+      opacity: 0.5;
+      cursor: pointer;
+      transition:  transform .4s;
+      &.icon-1 {
+        background: url('../images/school/games/words.png')center/contain no-repeat
+      }
+      &.icon-2 {
+        background: url('../images/school/games/coding.png')center/contain no-repeat
+      }
+      &.icon-3 {
+        background: url('../images/school/games/numbers.png')center/contain no-repeat
+      }
+      &.icon-4 {
+        background: url('../images/school/games/pizza.png')center/contain no-repeat
+      }
+      &.icon-5 {
+        background: url('../images/school/games/tangram.png')center/contain no-repeat
+      }
+      &.icon-6 {
+        background: url('../images/school/games/monster.png')center/contain no-repeat
+      }
+      &.active {
+        opacity: 1;
+        transform: scale(1.2);
+      }
+      &:hover {
+        opacity: 1;
+        transform: scale(1.2);
+      }
+    }
+  }//..grades-list-game-icon
+
+  .info-game {
+    
+    .info-game-inner {
+      display: none;
+      &.is-expand {
+        display: block;
+      }
+      .grades-list-game-info {
+        padding: 10px 0;
+        @include mq-hd-up {
+          padding: 0 50px;
+          display: flex;
+        }
+        
+        .game-image-contain {
+          @include mq-hd-up {
+            width: 50%
+          }
+          .gallery-top {
+            text-align: center;
+            @include mq-hd-up {
+              text-align: start;
+            }
+            .show-galery-top {
+              display: none;
+              height: 250px;
+              width: 300px;
+              @include mq-hd-up {
+                height: 400px;
+                width: 500px;
+                padding: 0
+              }
+              &.img-1 {
+                background: url('../images/school/thumb/schools-words.jpg')center/contain no-repeat
+              }
+              &.img-2 {
+                background: url('../images/school/thumb/schools-coding.jpg')center/contain no-repeat
+              }
+              &.img-3 {
+                background: url('../images/school/thumb/schools-numbers.jpg')center/contain no-repeat
+              }
+              &.img-4 {
+                background: url('../images/school/thumb/schools-pizza.jpg')center/contain no-repeat
+              }
+              &.img-5 {
+                background: url('../images/school/thumb/schools-tangram.jpg')center/contain no-repeat
+              }
+              &.img-5 {
+                background: url('../images/school/thumb/schools-monster.jpg')center/contain no-repeat
+              }
+              &.show {
+                display: inline-block;
+              }
+            }  
+          }//.gallery-top
+  
+          .gallery-thumbs{
+            display: flex;
+            cursor: pointer;
+            .show-galery-thumbs {
+              opacity: 0.5;
+              display: inline-block;
+              height: 80px;
+              width: 120px;
+              margin: 10px;
+              padding: 0;
+              &.thumbs-1 {
+                background: url('../images/school/thumb/words.jpg') center/cover no-repeat
+              }
+              &.thumbs-2 {
+                background: url('../images/school/thumb/schools-words.jpg') center/cover no-repeat  ;
+              }
+              &.thumbs-3 {
+                background: url('../images/school/thumb/coding.jpg') center/cover no-repeat  ;
+              }
+              &.thumbs-4 {
+                background: url('../images/school/thumb/schools-coding.jpg') center/cover no-repeat  ;
+              }
+              &.thumbs-5 {
+                background: url('../images/school/thumb/number.jpg') center/cover no-repeat  ;
+              }
+              &.thumbs-6 {
+                background: url('../images/school/thumb/schools-numbers.jpg') center/cover no-repeat  ;
+              }
+              &.thumbs-7 {
+                background: url('../images/school/thumb/pizza.jpg') center/cover no-repeat  ;
+              }
+              &.thumbs-8 {
+                background: url('../images/school/thumb/schools-pizza.jpg') center/cover no-repeat  ;
+              }
+              &.thumbs-9 {
+                background: url('../images/school/thumb/tangram.jpg') center/cover no-repeat  ;
+              }
+              &.thumbs-10 {
+                background: url('../images/school/thumb/schools-tangram.jpg') center/cover no-repeat  ;
+              }
+              &.thumbs-11 {
+                background: url('../images/school/thumb/monster.jpg') center/cover no-repeat  ;
+              }
+              &.thumbs-12 {
+                background: url('../images/school/thumb/schools-monster.jpg') center/cover no-repeat  ;
+              }
+  
+              &.active {
+                opacity: 1;
+                border: solid 2px #ff920a;
+              }
+            }
+          }//.gallery-thumbs
+        }//.game-image-contain
+  
+        .game-info-contain {
+          padding: 20px 0;
+          @include mq-hd-up {
+            width: 50%;
+            padding-right: 100px;
+          }
+          .game-name {
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 35px;
+            padding-bottom: 5px;
+          }//.game-name
+          .game-desc {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 22px;
+            padding-bottom: 10px;
+          }
+        }//.game-info-contain
+  
+  
+      }//.grades-list-game-info
+    }
+    
+
+  }//.info-game
+ }//.grades-body
+}//.stripe-for-grades

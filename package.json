@@ -1,0 +1,30 @@
+{
+  "name": "Osmo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gulp dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-cached": "^1.1.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-copy": "^4.0.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-livereload": "^4.0.1",
+    "gulp-nunjucks": "^4.0.0",
+    "gulp-nunjucks-html": "^2.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-prettier": "^2.1.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "prettier": "^1.16.4"
+  }
+}

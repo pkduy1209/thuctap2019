@@ -1,0 +1,37 @@
+.award-block {
+    .container {
+    }
+    .award-grid {
+        text-align: center;
+        padding: 20px 0 0;
+        
+
+        .award-title {
+            font-weight: 600;
+            font-size: 35px;
+            padding: 18px
+        }
+
+        .award-desc {
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 50px;
+            .amz-logo {
+                position: relative;
+                top: 8px;
+                height: 20px;
+            }
+
+        }
+
+        .award-img {
+            @include mq-hd-up {
+                height: 200px;
+            }
+            height: 150px;
+            padding: 20px;
+        }
+    }//.award-grid
+
+
+}//.award-block

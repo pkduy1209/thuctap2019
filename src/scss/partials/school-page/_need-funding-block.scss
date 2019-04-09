@@ -1,0 +1,71 @@
+.need-funding-block {
+    padding: 50px 0;
+
+    .container {
+        padding: 0 20px;
+    }//.container
+
+    .content-grid {
+        @include mq-hd-up {
+            display: flex;
+            justify-content: center;
+        }
+        .content-info {
+            max-width: 450px;
+
+            @include mq-hd-up {
+                width: 50%;
+                padding: 80px 0;
+            }
+
+            .info-title {
+                font-size: 32px;
+                font-weight: 600;
+                line-height: 40px;
+                padding-bottom: 15px;
+            }//.osmo-title
+        
+            .info-desc {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 22px;
+                padding-bottom: 25px;
+            }//.osmo-desc
+        
+            .start-btn {  
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 22px;
+                color: #28a4d2;
+                border: 1px solid #28a4d2;
+                border-radius: 50px;
+                padding: 10px 20px;
+                transition: border .4s,color .2s, background .4s;
+                cursor: pointer;
+                &:hover {
+                    color: #fff;
+                    background: #28a4d2;
+                }
+            }//.osmo-btn
+            .open-btn {
+                display: inline-block;
+                padding-top: 25px;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 22px;
+                color: #28a4d2;
+                cursor: pointer;
+            }//open-btn
+        }//.content-info
+    
+        .content-image {
+            background: url('../images/school/schools-choose.png') center/contain no-repeat;
+                display: block;
+                height: 350px;
+                @include mq-hd-up {
+                    width: 50%;
+                    height: 400px;
+                }
+        }
+    }//.content-grid
+}//.need-funding-block

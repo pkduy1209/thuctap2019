@@ -1,0 +1,6 @@
+.fake-header-block {
+  height: 50px;
+  @include mq-hd-up {
+    height: 80px;
+  }
+}

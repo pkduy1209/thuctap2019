@@ -1,0 +1,196 @@
+.school-carousel-block {
+  .container {
+    padding: 0 20px;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    // background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  
+  .flip-box {
+    background-color: transparent;
+    width: 200px;
+    height: 250px;
+    perspective: 1000px;
+  }
+  
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .flip-box-front {
+    background-color: #bbb;
+    color: black;
+    .category-name {
+      display: block;
+    }
+  }
+  
+  .flip-box-back {
+    color: white;
+    transform: rotateY(180deg);
+    &.color-1 {
+      background-color: #4eb2cc;
+    }
+    &.color-2 {
+      background-color: #fec144;
+    }
+    &.color-3 {
+      background-color: #75bead;
+    }
+    &.color-4 {
+      background-color: #fa9c54;
+    }
+    &.color-5 {
+      background-color: #f55650;
+    }
+    &.color-6 {
+      background-color: #fec144;
+    }
+    &.color-7 {
+      background-color: #fa9c54;
+    }
+    .flip-back-content {
+      text-align: center;
+      padding: 50px 20px;
+      .lesson-desc {
+        padding-top: 10px;
+        font-weight: 400;
+        font-size: 16px;
+      }
+      .game-icon {
+        display: inline-block;
+        height: 60px;
+        width: 60px;
+        margin-top: 30px;
+        border-radius: 22%;
+        &.icon-1 {
+          background: url('/images/school/games/art.jpg') center/contain;
+        }
+        &.icon-2 {
+          background: url('/images/school/games/geography.jpg') center/contain;
+        }
+        &.icon-3 {
+          background: url('/images/school/games/handwriting.jpg') center/contain;
+        }
+        &.icon-4 {
+          background: url('/images/school/games/reading.jpg') center/contain;
+        }
+        &.icon-5 {
+          background: url('/images/school/games/spelling.jpg') center/contain;
+        }
+        &.icon-6 {
+          background: url('/images/school/games/stem.jpg') center/contain;
+        }
+        &.icon-7 {
+          background: url('/images/school/games/spelling.jpg') center/contain;
+        }
+      }
+    }
+  }
+
+  .front-img {
+    width: 200px;
+    height: 250px; 
+  }
+  .category-name {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+    position: absolute;
+    top: 180.6px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+    text-align: center;
+  }//.category-name
+
+  .more-plans-block {
+    padding: 50px 0;
+    text-align: center;
+
+    .more-plans-desc {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 25px;
+    }
+    .btn-see-all{ 
+      display: inline-block;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 22px;
+      color: #28a4d2;
+      border: 1px solid #28a4d2;
+      border-radius: 50px;
+      padding: 10px 20px;
+      margin-top: 30px;
+      transition: border .4s,color .2s, background .4s;
+      cursor: pointer;
+      &:hover {
+          color: #fff;
+          background: #28a4d2;
+      }
+    }//.btn-see-all
+    .btn-download  {
+      display: inline-block;
+      padding-top: 25px;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 22px;
+      color: #28a4d2;
+      cursor: pointer;
+    }//.btn-download 
+  }//.more-plans-block
+
+  .swiper-button-next{
+    background-image: url('../images/school/arrow-swiper-right.png');
+    height: 50px;
+    width: 50px;
+    background-size: 20px 30px;
+    background-color: rgba(0, 0, 0, 0.09);
+    border-radius: 50%;
+    outline: none;
+  }
+  .swiper-button-prev{
+    background-image: url('/images/school/arrow-swiper-left.png');
+    height: 50px;
+    width: 50px;
+    background-size: 20px 30px;
+    background-color: rgba(0, 0, 0, 0.09);
+    border-radius: 50%;
+    outline: none;
+  }
+
+}//.school-carousel-block

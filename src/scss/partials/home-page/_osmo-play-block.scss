@@ -1,0 +1,159 @@
+.osmo-play-block {
+    .container {
+        padding: 50px 0;
+    }
+    .osmo-play-content {
+        @include mq-hd-up {
+            display: flex;
+        }
+
+    }//.osmo-play-content
+
+    .osmo-play-info {
+        
+        .info-title{
+            font-size: 32px;
+            line-height: 38px;
+            font-weight: 600;
+            padding: 10px 0;
+        }//.info-title
+
+        .info-desc {
+            font-size: 16px;
+            line-height: 22px;
+            font-weight: 300;
+            padding: 10px 0;
+        }//.info-desc
+        
+        &.mobile {
+            text-align: center;
+            display: block;
+            @include mq-hd-up {
+                display: none;    
+            }
+        }
+        &.pc {
+            display: none;
+            @include mq-hd-up {
+                display: block;
+            }
+        }
+    }//.osmo-play-info
+
+    .osmo-playing-video {
+        text-align: center;
+        .playing-video {
+            display: none;
+            &.show {
+                display: inline-block;
+            }
+            height: 250px;
+            @include mq-hd-up {
+                
+                height: 450px;
+            }
+            
+        }//.playing-vdeo
+    }//.osmo-playing-video
+
+    
+
+    .osmo-play-icon {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-around;
+        &.mobile {
+            @include mq-hd-up {
+                display: none;
+            }
+            align-content: space-around;
+        }
+
+        .osmo-col{
+            text-align: center;
+            padding: 20px;
+            @include mq-hd-up{
+                padding: 20px 20px 0 0;
+            }
+            font-size: 14px;
+            font-weight: 600;
+            color: gray;
+            cursor: pointer;
+            transition: color .3s, background .3s;
+            .skill{
+                padding-top: 5px;
+            }
+
+            &:hover, &.active{
+
+                &.col-1{
+                    color: #d93968;
+                }
+                &.col-2{
+                    color: #ffc600;
+                }
+                &.col-3{
+                    color: #9bc23d;
+                }
+                &.col-4{
+                    color: #22b072;
+                }
+                &.col-5{
+                    color: #00adee;
+                }
+                &.col-6{
+                    color: #4d5fad;
+                }
+
+                .play-icon{
+                    &.icon-1 {
+                        background: url('../images/play/active-icon-math.png') center/contain no-repeat ;
+                    }
+                    &.icon-2 {
+                        background: url('../images/play/active-icon-puzzle.png') center/contain no-repeat ;
+                    }
+                    &.icon-3 {
+                        background: url('../images/play/active-icon-coding.png') center/contain no-repeat ;
+                    }
+                    &.icon-4 {
+                        background: url('../images/play/active-icon-business.png') center/contain no-repeat ;
+                    }
+                    &.icon-5 {
+                        background: url('../images/play/active-icon-words.png') center/contain no-repeat ;
+                    }
+                    &.icon-6 {
+                        background: url('../images/play/active-icon-drawing.png') center/contain no-repeat ;
+                    }
+                }//.play-icon
+            }
+
+            .play-icon{
+                height: 60px;
+                width: 60px;
+                &.icon-1 {
+                    background: url('../images/play/inactive-math.png') center/contain no-repeat ;
+                }
+                &.icon-2 {
+                    background: url('../images/play/inactive-puzzle.png') center/contain no-repeat;
+                }
+                &.icon-3 {
+                    background: url('../images/play/inactive-coding.png') center/contain no-repeat;
+                }
+                &.icon-4 {
+                    background: url('../images/play/inactive-business.png') center/contain no-repeat;
+                }
+                &.icon-5 {
+                    background: url('../images/play/inactive-words.png') center/contain no-repeat;
+                }
+                &.icon-6 {
+                    background: url('../images/play/inactive-drawing.png') center/contain no-repeat;
+                }
+            }//.play-icon
+
+        }//.osmo-col
+
+        
+    }//.osmo-play-icon
+    
+
+}//.osmo-play-block

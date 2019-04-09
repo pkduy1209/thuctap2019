@@ -1,0 +1,132 @@
+.shopping-option-block {
+    .container {
+
+    }//.container
+
+    .shop-option {
+        display: flex;
+        justify-content: center;
+        padding: 30px 10px 0;
+        @include mq-hd-up {
+            padding: 30px
+        }
+
+        
+
+    }//.shop-option
+
+    .option-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+        margin: 5px;
+        color: #373737;
+        @include mq-hd-up {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+        }
+        &.box-1 {
+            margin: 10px;
+            width: 50%;
+            border: solid blue 1px;
+            border-radius: 15px;
+            opacity: 0.7;
+            transition: transform .4s;
+            &:hover {
+                opacity: 1;
+                transform: scale(1.02);
+            }
+        }
+        &.box-2 {
+            margin: 10px;
+            width: 50%;
+            border: solid red 1px; 
+            border-radius: 15px;
+            opacity: 0.7;
+            transition: transform .4s;
+            &:hover {
+                opacity: 1;
+                transform: scale(1.02);
+            }
+        }
+
+        .box-title {
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 22px;
+            padding: 10px 0;
+            @include mq-hd-up {
+                font-size: 30px;
+            }
+        }//.box-title
+
+        .box-image-holder {
+            padding: 10px 0;
+            &::before {
+                content: '';
+                display: block;
+                padding-bottom:50%
+            }
+            &.img-1 {
+                background: url('../images/option-kits.jpg') center/contain;
+            }
+            &.img-2 {
+                background: url('../images/option-games.jpg') center/contain no-repeat;
+            }
+        }//.box-image-holder
+
+        .box-desc {
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 25px;
+        }//.box-desc
+
+        .shop-buying {
+            align-self: flex-end;
+            display: block;
+
+            @include mq-hd-up {
+                align-self: center;
+                padding: 10px 20px;
+            }
+
+            .box-price {
+                font-size: 18px;
+                line-height: 22px;
+                padding: 10px
+            }
+            .box-btn-shop{
+                display: block; 
+                padding: 10px;
+                border: solid #ff9b0b 1px;
+                border-radius: 50px;
+                color: #fff;
+                background-color: #ff9b0b;
+                font-weight: 600;
+                font-size: 14px;
+                margin-top: 10px;
+                
+                .for {
+                    display: none;
+                    @include mq-hd-up {
+                        display: inline;
+                    }
+                }
+            }//.box-btn-shop
+        }//.shop-buying
+        
+
+        
+    }//.option-box
+    .image-monster {
+        background: url('../images/monster.jpg') center/contain no-repeat;
+        height: 200px;
+        @include mq-hd-up {
+            display: none;
+        }
+    }
+
+}//.shopping-option-block

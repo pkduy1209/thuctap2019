@@ -1,0 +1,39 @@
+.learning-osmo-block {
+    position: relative;
+    background-color: #f8f8f8;
+    
+    .learning-osmo-content {
+        padding-bottom: 30px;
+
+        @include mq-hd-up{
+            max-width: 450px;
+            position: absolute;
+            top: 0;
+            padding: 115px 0;
+        }
+         
+        .learning-info {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 22px;
+            .info-title {
+                padding: 30px 10px 10px;
+            }
+            .info-desc {
+                padding: 10px;
+            }
+        }//.learning-info
+    }//.learning-osmo-content
+
+    .learning-image {
+        background: url("../images/school/schools-about-osmo.png") no-repeat left 85% center/cover;
+        height: 300px;
+
+        @include mq-hd-up {
+            background: url("../images/school/schools-about-osmo.png") no-repeat left 100% center/contain;     
+            height: 500px;
+        }
+       
+    }//.learning-image
+
+}//.learning-osmo-block

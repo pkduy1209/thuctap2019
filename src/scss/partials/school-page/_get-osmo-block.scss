@@ -1,0 +1,45 @@
+.get-osmo-block {
+    background: #f8f8f8;
+    text-align: center;
+    padding: 0 15px;
+    
+
+    .container {
+        padding: 70px 0;
+    }//.container
+
+    .osmo-title {
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 35px;
+        padding-bottom: 5px;
+    }//.osmo-title
+
+    .osmo-desc {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        margin-top: 15px;
+    }//.osmo-desc
+
+    .osmo-btn {
+        display:inline-block;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 30px;
+        background: linear-gradient(to right,#ff9b0b 0,#ff8408 100%);
+        color: #fff;
+        border: 1px solid linear-gradient(to right,#ff9b0b 0,#ff8408 100%);
+        border-radius: 50px;
+        @include mq-hd-up{
+            padding: 18px 30px;
+        }
+        padding: 15px 22px;
+        margin-top: 30px;
+        transition: transform .5s;
+        &:hover {
+            transform: scale(1.1)
+        }
+    }//.osmo-btn 
+
+}//.get-osmo-block

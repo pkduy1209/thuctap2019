@@ -1,0 +1,38 @@
+.bner-school-block {
+    text-align: center;
+    background: url("../images/school/schools-hero.jpg") center/cover no-repeat;
+    height: 400px;
+    @include mq-hd-up {
+        height: 600px;
+    }
+    .bner-school-title{
+        padding: 70px 0 50px;
+        color: #fff;
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 55px;
+        @include mq-hd-up {
+            font-size: 70px;
+            font-weight: 600;
+            line-height: 30px;
+        }
+    }//.bner-school-title   
+
+    .video-btn{
+        display:inline-block;
+        background: url(http://www.slatecube.com/images/play-btn.png) no-repeat center/contain; 
+        height: 100px;
+        width: 100px;
+        transition: transform .4s;
+        @include mq-hd-up {
+            margin-top: 30px;
+            height: 120px;
+            width: 120px;
+        }
+        &:hover {
+            transform: scale(1.5);
+            
+        }
+    }
+    
+}//.bner-school-block

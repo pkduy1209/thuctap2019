@@ -1,0 +1,336 @@
+.header-block {
+  background: #fff;
+  width: 100%;
+  position: fixed; // Giup cho co dinh header o tren
+  box-shadow: 0 0 5px rgba(#000,0.2); // Do bong
+  z-index: 2;
+
+  .mobile-menu {
+    position: fixed;
+    width: 264px;
+    top: 50px;
+    bottom: 0;
+    background-color: #333;
+    transition: 0.3s;
+    left: -280px;
+    
+
+    &.is-expended{
+      left:  0px;
+      box-shadow: 0 0 16px 0 rgba(0,0,0,.5);
+      
+    }
+    
+    @include mq-hd-up {
+      display: none;
+    }
+
+    .mobile-menu-inner {
+      .mobile-menu-list {
+        list-style-type: none;
+        align-items: center;
+
+        li {
+          margin: 20px;
+
+          .img-mobile-menu {
+            
+            height: 20px;
+          }
+        }
+
+        a {
+          font-size: 25px;
+          font-weight: 600;
+          color: #fff;
+
+          &:hover {
+            color: $main-link-hover-color;
+          }
+        }
+
+        .list-game-mobile {
+          cursor: pointer;
+          display: none;
+          
+          .icon-game {
+            padding: 15px 5px;
+            display: flex;
+            .image-icon {
+              height: 40px;
+              width: 40px;
+              border-radius: 20%;
+            }
+            .name-icon {
+              font-size: 16px;
+              font-weight: 400;
+              padding: 10px;
+            }
+          }
+        }
+      }//mobile-menu-list
+    }//mobile-menu-inner
+  }//mobile-menu
+
+  .container {
+    // Xem bai flexbox de hieu
+    display: flex;
+    align-items: center; // danh deu theo chieu doc
+    justify-content: space-between;
+    padding: 0 10px;
+    height: 50px;
+    
+    @include mq-hd-up {
+      height: 80px;
+    }
+  }//container
+
+  .hambuger-menu-col {
+    @include mq-hd-up {
+      display: none;
+    }
+     
+    .hambuger-menu-btn{
+      background: transparent;
+      border: 0; 
+      outline: none;
+
+      .bar-1,.bar-2, .bar-3 {
+        width: 16px;
+        height: 2px;
+        background-color:#333;
+        margin-top: 3px;
+        transition: 0.4s;
+        border-radius: 20px;
+      } 
+      &.open{
+        .bar-1 { 
+          -webkit-transform: rotate(-45deg) translate(-5px, 4px);
+          transform: rotate(-45deg) translate(-5px, 4px);
+        }
+  
+        .bar-2{
+          opacity: 0;
+        }
+  
+        .bar-3 {
+          -webkit-transform: rotate(45deg) translate(-3px, -2px);
+          transform: rotate(45deg) translate(-3px, -2px);
+        }
+      }//transform
+    }//hambuger-menu-btn
+  }// .huambuger-menu-col 
+
+  .logo-col {
+    a {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-img {
+      max-height: 20px;
+      width: auto;
+
+      @include mq-hd-up {
+        max-height: 30px;
+      }
+    }
+  }// .logo-col
+
+  .menu-page-col {
+    display: none;
+    
+
+    @include mq-hd-up {
+      display: block;
+    }
+
+    .menu-page-list {
+      display: flex;
+      list-style-type: none;
+      align-items: center;
+      
+      li {
+        margin: 0 50px 0 0;       
+      }
+      .dropdown-menu {
+        
+        .dropdown-btn {    
+          font-weight: 700;
+          font-size: 16px;
+          color:rgb(113, 113, 113);
+          cursor: pointer;
+          transition: all 0.3s;
+          &:hover{  
+            height: 80px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+           .dropdown-content-block {
+            visibility: visible;
+            opacity: 1;
+            //display: block;
+           }
+          }         
+        }//.dropdown-btn
+        .dropdown-content-block {
+          //display: none;
+          opacity: 0;
+          transition: all .5s ease;
+          visibility: hidden;
+          cursor: default;
+          position: absolute;
+          right: 0;
+          left: 0;
+          top:80px;
+          bottom: 0;
+          width: 100%;
+
+          
+          .tab-head-title {
+            border-top:#f5f5f5 solid 1px;
+            height: 30px;
+            background: #fff;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 600;
+            display: flex;
+            justify-content: center;
+            padding: 25px;
+            .btn-change-tab {
+              font-weight: 400;
+              padding: 13px 250px;
+              &.active-tab {
+                color: red;
+                border-bottom: red solid 5px;
+              }
+            }
+
+          }//tab-head-title
+
+          .tab-body-content{
+            
+            
+            .tab-content{
+              display: none;   
+              &.tab-1 {
+                background: url('../images/detective-banner-desktop.jpg') center/cover no-repeat;
+                height: 500px;
+                color: #fff;
+                
+                .info-content {
+                  float: right;
+                  padding: 80px;
+                  .title {
+                    font-size: 42px;
+                    font-weight: 600;
+                    line-height: 22px;
+                  }  
+                  .name-game {
+                    display:inline-block;
+                    height: 80px;
+                    margin: 30px 0;
+                  }
+                  .desc {
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 22px;
+                    padding: 0 0 30px;
+                  }
+                  .btn-more {
+                    display: inline-block;
+                    color: rgb(124, 180, 119);
+                    background: #fff;
+                    padding: 20px;
+                    border-radius: 50px;
+                    font-size: 22px;
+                    font-weight: 600;
+                    transition: transform .4s;
+                    &:hover {
+                      transform: scale(1.1);
+                    }
+                  }
+                }//.info-content              
+              }//.tab-1
+              &.tab-2 {
+                background: linear-gradient(to right, rgb(0, 142, 211), rgb(0, 173, 238) 50%, rgb(0, 142, 211));
+                height: auto;
+                width: 100%;
+                padding: 50px 300px;
+                .all-games-list {
+                  display: flex;
+                  flex-wrap: wrap;
+                  cursor: pointer;
+                  
+                  
+                }//.all-games-list
+                .game-content {
+                  text-align: center;
+                  color: #fff;
+                  height: 150px;
+                  width: 150px;
+                  margin: 15px;
+                }
+                .game-img {
+                  height: 90px;
+                  width: 90px;
+                  border-radius: 22px;
+                  transition: transform .4s;
+                  &:hover {
+                    transform: scale(1.1)
+                  }
+                }
+                .game-name {
+                  padding: 5px 0;
+                  font-size: 20px;
+                  font-weight: 400;
+                  line-height: 32px;
+                }
+              }
+              &.is-expend {
+                display: block;
+              }
+            }
+          }//.tab-body-content
+          
+        }//.dropdown-content-block
+      }//.dropdown-menu
+
+      a {
+        font-weight: 700;
+        font-size: 16px;
+        color:rgb(113, 113, 113);
+        
+
+        &:hover {
+          color: $main-link-hover-color;
+        }
+      }
+    }//.menu-page-list
+  }//.menu-page-col
+
+  .shop-col {
+    .shop-now-btn {
+      @include mq-hd-up {
+        padding: 10px 20px; 
+      }
+      color: #fff;
+      border-radius: 30px;
+      padding: 10px 10px;
+      background: linear-gradient(to right,#ff9b0b 0,#ff8408 100%);
+      transition: 0.2s;
+      font-weight: 700; // Do day cua font
+      transition: transform .5s;
+      .span-now {
+        display: none;
+        @include mq-hd-up {
+          display:inline;
+        }
+      }
+
+    }//shop-now-btn
+    &:hover {
+      transform: scale(1.1)
+    }
+  }// shop.col
+}// .header-block

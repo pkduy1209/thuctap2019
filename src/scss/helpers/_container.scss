@@ -1,0 +1,6 @@
+.container {
+  @include mq-hd-up {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
