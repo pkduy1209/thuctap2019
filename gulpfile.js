@@ -79,7 +79,7 @@ gulp.task('copy:images', function() {
   return gulp.src(APP_STRUCTURE.src.images + '/**/*.{png,jpg,gif,svg,webm,mp4}')
   .pipe(gulpPlumber())
   .pipe(gulpCached('copy:images'))
-  .pipe(gulpCopy(APP_STRUCTURE.dist.images, {prefix: 2}))
+  .pipe(gulpCopy(APP_STRUCTURE.dist.images, {prefix: 2}));
 });
 
 gulp.task('copy:js', function() {
@@ -90,7 +90,7 @@ gulp.task('copy:js', function() {
 });
 
 gulp.task('copy:fonts', function() {
-  return gulp.src (APP_STRUCTURE.src.fonts)
+  return gulp.src (APP_STRUCTURE.src.fonts, { allowEmpty: true })
   .pipe(gulpPlumber())
   .pipe(gulpCached('copy:fonts'))
   .pipe(gulpCopy(APP_STRUCTURE.dist.fonts, {prefix: 2}));
